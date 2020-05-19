@@ -21,6 +21,18 @@ def normalized_least_squares(patch1, patch2):
         return product
 
 def box_pairing(im1,im2,ks,step_interval1,step_interval2):
+
+    """
+    searching features
+
+    :param im1: left side,reference image
+    :param im2:  right side image
+    :param ks: sizes of searching the kernel
+    :param step_interval1: moving step size on reference images
+    :param step_interval2: searching step size on right side image
+    :return: coordinates of the same feature on both images
+    """
+
     im1 = 255-im1
     im2 = 255- im2
     correlation_coefficient_arr = []
